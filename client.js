@@ -14,7 +14,14 @@ const connect = () => {
 
   conn.on('connect', () => {
     conn.write('Name: PL');
+
+    // const moveUp = setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 500);
+
+    // setTimeout(() => clearInterval(moveUp), 10000);
   });
+
   return conn;
 };
 
