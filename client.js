@@ -12,9 +12,9 @@ const connect = () => {
     console.log(data);
   });
 
-  // conn.on('connect', () => {
-  //   conn.write("Hello from Phat!");
-  // });
+  conn.on('connect', () => {
+    conn.write('Name: PL');
+  });
   return conn;
 };
 
