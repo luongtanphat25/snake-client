@@ -1,9 +1,10 @@
 const net = require('net');
+const {IP, PORT, NAMES} = require('./constants');
 
 const connect = () => {
   const conn = net.createConnection({
-    host: '165.227.47.243',
-    port: 50541
+    host: IP,
+    port: PORT
   });
 
   conn.setEncoding('utf8');
@@ -13,7 +14,7 @@ const connect = () => {
   });
 
   conn.on('connect', () => {
-    conn.write('Name: PL');
+    conn.write(NAMES);
 
     // const moveUp = setInterval(() => {
     //   conn.write('Move: up');
@@ -27,4 +28,4 @@ const connect = () => {
 
 
 
-module.exports = connect;
+module.exports = {connect};
